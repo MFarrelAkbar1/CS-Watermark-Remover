@@ -1,4 +1,4 @@
-# CamScanner Watermark Remover
+# CS Watermark Remover
 
 Hapus watermark CamScanner dari file PDF.
 
