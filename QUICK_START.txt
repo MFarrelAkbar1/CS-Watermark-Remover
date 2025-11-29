@@ -1,0 +1,80 @@
+================================================================================
+  CAMSCANNER WATERMARK REMOVER v2.0 - QUICK START GUIDE
+  (Menghapus Image + Text Watermark)
+================================================================================
+
+INSTALASI (Hanya sekali):
+--------------------------
+1. Install PyMuPDF:
+   pip install PyMuPDF
+
+   ATAU dengan requirements.txt:
+   pip install -r requirements.txt
+
+
+CARA PENGGUNAAN:
+--------------------------
+python remove_camscanner.py "path/to/file.pdf"
+
+
+CONTOH:
+--------------------------
+# File di folder yang sama:
+python remove_camscanner.py document.pdf
+
+# File dengan path lengkap:
+python remove_camscanner.py "C:\Documents\scan.pdf"
+
+# File dengan spasi di path:
+python remove_camscanner.py "C:\Users\Nama User\Documents\my scan.pdf"
+
+
+OUTPUT:
+--------------------------
+Script akan membuat file baru dengan suffix "_cleaned"
+Contoh: scan.pdf -> scan_cleaned.pdf
+
+
+TEST SCRIPT:
+--------------------------
+Untuk test, buat test PDF terlebih dahulu:
+python create_test_pdf.py
+
+Lalu jalankan cleaner:
+python remove_camscanner.py test_document.pdf
+
+
+FITUR:
+--------------------------
+✓ Hapus IMAGE watermark (logo + "Dipindai dengan CamScanner") di footer
+✓ Hapus TEKS "CamScanner" dari semua halaman
+✓ Deteksi otomatis watermark di pojok kanan bawah
+✓ Bersihkan metadata Producer/Creator
+✓ File asli tidak berubah
+✓ Optimasi ukuran file PDF
+✓ Support UTF-8 di Windows Console
+
+
+TROUBLESHOOTING:
+--------------------------
+Error: "No module named 'fitz'"
+   Solusi: pip install PyMuPDF
+
+Error: "Permission denied"
+   Solusi: Tutup file PDF jika sedang dibuka
+
+Error: Emoji tidak muncul
+   Solusi: Script sudah otomatis handle encoding Windows
+
+
+CATATAN PENTING:
+--------------------------
+- JANGAN install package "fitz" (itu package yang salah!)
+- HARUS install "PyMuPDF" (yang import sebagai fitz)
+- File asli tidak akan diubah
+- Proses redaction bersifat permanen pada file output
+
+
+================================================================================
+Untuk dokumentasi lengkap, lihat README.md
+================================================================================
